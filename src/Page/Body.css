@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+}
+.bx{
+    border-radius: 9px;
+    padding: 40px;
+    
+}
+.card:hover{
+    scale: 1.1;
+    transition-duration: 1s;
+}
+.card{
+    border-radius: 9px;
+}
+.ft:hover{
+    scale: 1.1;
+    transition-duration: 1s;
+}
