@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import google from "../images/google.png";
 import Footer from "../Page/Footer";
+import { useNavigate } from "react-router-dom";
+
+
 const Users = () => {
+  const navigate=useNavigate()
+
   const [users, setUsers] = useState([]);
   const [otherstate, setOtherstate] = useState(false);
   useEffect(() => {
@@ -27,6 +32,7 @@ const Users = () => {
                 <a href="https://www.mapsofworld.com/" className="btn btn-primary">
                   {user.address.city}
                 </a>
+                <button className="bg-info rounded mt-1" onClick={()=>navigate(`/dashboard/user/${user.id}`)} style={{}}>Click Me to see Details</button>
               </div>
             </div>
           </div>
