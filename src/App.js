@@ -11,6 +11,10 @@ import { useState } from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import Dashboard from "./Page/Dashboard";
 import Details from "./components/Details";
+import Main from "./components/Main";
+import Profile from "./components/Profile";
+import Messeges from "./components/Messeges";
+import Blog from "./components/Blog";
 
 function App() {
   const [num, setNum] = useState(0);
@@ -27,7 +31,7 @@ function App() {
       </nav> */}
 
       <Routes>
-        <Route path="/footer" element={<Footer />} />
+        {/* <Route path="/footer" element={<Footer />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/users" element={<Users />} />
           <Route path="/dashboard/footer" element={<Footer />} />
@@ -35,15 +39,27 @@ function App() {
           <Route path="/dashboard/register" element={<Register />} />
 
           <Route path="/dashboard/user/:id" element={<Details/>}/>
-        </Route>
+        </Route> */}
+      </Routes>
+
+      <Routes>
+        {/* <Route path="/main" element={<Main />}>
+          <Route path="/main/profile" element={<Profile />} />
+          <Route path="/main/messeges" element={<Messeges/>}/>
+          <Route path="/main/blog" element={<Blog/>}/>
+        </Route> */}
       </Routes>
 
       {/* <Register/> */}
       {/* <Login /> */}
       {/* <Users/> */}
       {/* <Footer /> */}
-      {/* <Post/> */}
-      <Dashboard />
+      <Post/>
+      {/* <Dashboard /> */}
+      {/* <Main /> */}
+      {/* <Profile/> */}
+      {/* <Messeges/> */}
+      {/* <Blog/> */}
       {/* <Expencecalc num={num} others={otherstate}/> */}
 
       {/* <input

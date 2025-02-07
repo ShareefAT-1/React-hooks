@@ -1,24 +1,28 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useUser } from "./Userprovider";
 
 const Post = () => {
   const [posts, setPost] = useState([]);
+  const {user}=useUser()
+      console.log(user)
 
   useEffect(() => {
+
     console.log("mounded!");
-    // axios
-    //   .get("https://jsonplaceholder.typicode.com/posts")
-    //   .then((res) => {
-    //     console.log(res);
-    //     setPost(res.data);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => {
+        console.log(res);
+        setPost(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
    const intervalId = setInterval(() => {
       console.log("timer is running");
-    }, 2000);
+    }, 10000);
 
     return () => {
       console.log("component unmounded");
